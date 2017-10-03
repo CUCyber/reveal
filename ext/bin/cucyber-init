@@ -1,0 +1,8 @@
+#!/bin/sh -e
+cp -r /ext/lib/reveal-multiplex /usr/lib/reveal-multiplex
+cd /usr/lib/reveal-multiplex
+
+sed -i -e "s/{user: password}/${CUCYBER_REVEAL_AUTH}/g" creds.js
+
+npm install
+exec npm start
