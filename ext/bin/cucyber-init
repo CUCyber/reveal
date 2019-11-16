@@ -7,4 +7,4 @@ cd /usr/lib/reveal-multiplex
 
 sed -i -e "s/{'reveal': 'password'}/${CUCYBER_REVEAL_AUTH}/g" creds.js
 
-exec setpriv --reuid=cucyber --regid=cucyber --init-groups npm start
+exec setpriv --reuid=cucyber --regid=cucyber --init-groups --reset-env npm start
